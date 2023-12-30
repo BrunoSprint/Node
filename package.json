@@ -1,12 +1,12 @@
 {
-  "name": "node_js",
+  "name": "getting_started_node_js",
   "version": "1.0.0",
-  "description": "node",
+  "description": "Aplicação de Estudo de NodeJs",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["aula", "youtube", "getting started"],
+  "author": "BrunoSprint",
   "license": "ISC"
 }
