@@ -1,13 +1,11 @@
-const http = require("http")
+/*npm i express
+importa o encadeamento de tudo oque foi instalado
+*/
 
-const hostname = "localhost"
-const port = 3333
 
-const server = http.createServer((req, res)=>{
-    res.setHeader("Content-type", "text/plain")
-    res.end("HelloWord!!!")
-})
+const express = require("express")
+const app = express()
 
-server.listen(port, hostname, ()=>{
-    console.log("SERVIDOR RODANDO/ATIVO")
-})
+const app = express()
+
+console.log(path.join(__dirname + "/pages/home.html"))
