@@ -3,6 +3,6 @@ importa o encadeamento de tudo oque foi instalado
 */
 
 
-const express = require("wxpress")
+const express = require("express")
 const app = express()
 
