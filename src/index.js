@@ -1,11 +1,25 @@
-/*npm i express
-importa o encadeamento de tudo oque foi instalado
-*/
+const express = require("express");
+const path = require("path");
 
+const app = express();
+const router = express.Router();
 
-const express = require("express")
-const path = require("path")
+// Adiciona o middleware para servir arquivos estáticos do diretório 'public'
+app.use(express.static(path.join(__dirname, 'public')));
 
-const app = express()
+router.get("/", (req, res) => {
+    // Corrige a construção do caminho removendo as aspas simples
+    res.sendFile(path.join(__dirname, 'views', '/home.HTML'));
+});
 
-console.log(path.join(__dirname + "/pages/home.html"))
+router.get("/contato", (req, res) => {
+    // Corrige a construção do caminho removendo as aspas simples
+    res.sendFile(path.join(__dirname, 'views', '/contato.HTML'));
+});
+
+app.use(router);
+
+const PORT = process.env.PORT || 3333;
+app.listen(PORT, () => {
+    console.log(`Servidor rodando na porta ${PORT}`);
+});
