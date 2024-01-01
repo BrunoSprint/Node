@@ -19,3 +19,8 @@ app.listen(3333, ()=>{
     console.log("Servidor rodando-Ativo");
 });
 
+// Em caso de Hospedagem realizar Alteração: Servidor / Host
+
+//  método de servidor host-local ||   app.listen(3333, ()=>{
+//  método Servidor hospedado     ||   app.listen(process.env.PORT || 3333, ()=>{ 
+ 
