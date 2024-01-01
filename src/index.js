@@ -1,30 +1,23 @@
-const express = require("express");
-const path = require("path");
+const express = require("express")
+const path = require("path")
 
-const app = express();
-const router = express.Router();
+const app = express()
+const router = express.Router()
 
-// Adiciona o middleware para servir arquivos estáticos do diretório 'public'
-app.use(express.static(path.join(__dirname, 'public')));
+console.log(path.join(__dirname + "/src/pages/home.html"))
 
-router.get("/", (req, res) => {
-    // Corrige a construção do caminho removendo as aspas simples
-    res.sendFile(path.join(__dirname, 'views', '/home.HTML'));
+
+router.get("/", (req, res)=>{
+    res.sendFile(path.join(__dirname + "/src/pages/home.html"));
 });
 
-router.get("/contato", (req, res) => {
-    // Corrige a construção do caminho removendo as aspas simples
-    res.sendFile(path.join(__dirname, 'views', '/contato.HTML'));
+router.get("/contato", (req, res)=>{
+    res.sendFile(path.join(__dirname + "/src/pages/contato.html"));
 });
 
 app.use(router);
 
-const PORT = process.env.PORT || 3333;
-app.listen(PORT, () => {
-    console.log(`Servidor rodando na porta ${PORT}`);
+app.listen(3333, ()=>{
+    console.log("Servidor rodando");
 });
 
-
-/*  servidor em bug, pausa 30.49 javascript,
-
-*/
