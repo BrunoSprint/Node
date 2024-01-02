@@ -1,2 +1,3 @@
 # Node
-node
+node.js
+localhost |  servidor de hospedagem 
